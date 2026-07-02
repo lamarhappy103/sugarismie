@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Space Grotesk', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  
+  --color-brand-bg: #F9FAFB; /* Pure crisp clean off-white background from theme specs */
+  --color-brand-charcoal: #111827; /* Rich deep charcoal text */
+  --color-brand-accent: #2563EB; /* Vivid brand blue from specs */
+  --color-brand-accent-hover: #1D4ED8; /* Solid deep blue hover */
+  --color-brand-border: #E5E7EB; /* Crisp clean grey border lines */
+  --color-brand-muted: #6B7280; /* Perfect neutral grey for helper labels */
+}
+
+/* Custom styles for utility trimmer UI */
+body {
+  background-color: var(--color-brand-bg);
+  color: var(--color-brand-charcoal);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #E5E5E5;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #D4D4D4;
+}
+
+/* Custom flat range slider styling for Start/End times */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+input[type="range"]:focus {
+  outline: none;
+}
+
+/* Audio wave canvas animation */
+@keyframes pulse-soft {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 1; }
+}
+.pulse-waveform {
+  animation: pulse-soft 2s infinite ease-in-out;
+}
+

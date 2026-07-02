@@ -1,0 +1,6 @@
+{
+  "name": "Audio Trimmer",
+  "description": "A fast, privacy-focused client-side audio cutter and trimmer.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
